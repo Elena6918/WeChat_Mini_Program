@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<scroll-view class="hot-item-container" scroll-y="true">
+  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="600">
+    <block wx:for="{{swipers}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="750"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</scroll-view>
+
+<view class="intro-item-container">
+  <view wx:for="{{intro}}" class="intro-image">
+    <image src="{{item[0]}}" class="intro-image">
+    </image>
+      <image src="{{item[1]}}" class="intro-image">
+    </image>  
+  </view>
+</view>
+
+<view class="line-text">
+  校园动态
+</view>
+ 
+<view class="container">
+ <view wx:for="{{cardTeams}}" wx:key="{{cardTeam.viewid}}" wx:for-item="cardTeam" class="item" bindtap="bindViewTap">
+  <image class="img" src="{{cardTeam.imgsrc}}" mode="scaleToFill"></image>
+  <view class="number-wrapper">
+   <text class="name">{{cardTeam.name}}</text>
+   <view class="count-wrapper">
+    <text class="count">{{cardTeam.count}}</text>
+   </view>
+  </view>
+ </view>
+</view>
+
+ 

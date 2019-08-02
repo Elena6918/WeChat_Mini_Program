@@ -1,0 +1,6 @@
+<view class="resource">
+  <view wx:for="{{imgList}}" wx:key="index">
+    <image src="{{item}}" class="resource-image">
+    </image>
+  </view>
+</view>
