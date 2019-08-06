@@ -1,9 +1,9 @@
 <view class="container">
-  <image src="/images/logo.png" class="avatar">
-  </image>
-  <view class="setting">
-    <view bindtap="login">
-      <button class="login">登 录</button>
-    </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="login"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
 </view>

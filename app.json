@@ -5,8 +5,8 @@
     "pages/weixinlink/weixinlink",
     "pages/resource/resource",
     "pages/setting/setting",
-    "pages/login/login",
-    "pages/register/register"
+    "pages/trade/trade",
+    "pages/play/play"
   ],
   "window":{
     "backgroundTextStyle": "dark",

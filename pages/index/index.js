@@ -9,8 +9,8 @@ Page({
     ],
     intro: [
       [
-        '/images/MSN.PNG',
-        '/images/UVA.PNG'
+        '/images/trade.png',
+        '/images/play.png'
       ],
     ],
     cardTeams: [{
@@ -62,12 +62,14 @@ Page({
   /**
    * 点击跳转详情页
    */
-  onItemClick(e) {
-    var targetUrl = api.PAGE_WORK
-    if (e.currentTarget.dataset.rowId != null)
-      targetUrl = targetUrl + '?rowId=' + e.currentTarget.dataset.rowId
+  tradeView: function () {
     wx.navigateTo({
-      url: targetUrl
+      url: '../trade/trade'
+    })
+  },
+  playView: function () {
+    wx.navigateTo({
+      url: '../play/play'
     })
   },
 
@@ -78,6 +80,7 @@ Page({
 
     })
   },
+
   onLoad: function () {
     console.log('onLoad:' + app.globalData.domain)
 

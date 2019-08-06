@@ -11,9 +11,9 @@
 
 <view class="intro-item-container">
   <view wx:for="{{intro}}" class="intro-image">
-    <image src="{{item[0]}}" class="intro-image">
+    <image src="{{item[0]}}" class="intro-image" bindtap="tradeView">
     </image>
-      <image src="{{item[1]}}" class="intro-image">
+      <image src="{{item[1]}}" class="intro-image" bindtap="playView">
     </image>  
   </view>
 </view>

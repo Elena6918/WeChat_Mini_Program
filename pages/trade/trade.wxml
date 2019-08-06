@@ -1,0 +1,15 @@
+<!--pages/trade/trade.wxml-->
+Trade Page
+<block wx:for="{{list}}">
+    <view class="trade-item">
+      <view class="image-container" data-row-id="{{item.row_id}}" bindtap="onItemClick">
+        <image src="../images/MSN.PNG"
+          mode="scaleToFill" class="trade-image">
+        </image>
+        <view class="item-mask">
+          <text class="trade-item-title">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+</block>
+
