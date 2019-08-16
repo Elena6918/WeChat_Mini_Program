@@ -1,0 +1,8 @@
+<!--pages/play/edit.wxml-->
+<view class="edit-block">
+<form bindsubmit="formSubmit">
+    <input type="text" placeholder="标题" name="title" bindinput="titleName"/>
+    <textarea placeholder="内容" name="content" bindinput="contentName"/>
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>

@@ -1,4 +1,9 @@
-//app.js
+const AV = require('./utils/av-weapp-min.js');
+AV.init({
+  appId: 'lm20RxlOqkUTdHTo411DVw1b-MdYXbMMI',
+  appKey: 'js8n7CPkN6HxPMMwzlIFWTdT',
+});
+
 App({
   onLaunch: function () {
     // 展示本地存储能力

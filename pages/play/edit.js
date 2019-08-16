@@ -1,25 +1,41 @@
-// pages/play/play.js
-var api = require('../../utils/api.js')
+// pages/play/edit.js
+const currentPlay = require('../../model/CreatePlay');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    worklist:[1,2,3,4,5],
+  
   },
+
+  titleName: function (e) {
+    this.setData({
+      title: e.detail.value
+    })
+  },
+
+  contentName: function (e) {
+    this.setData({
+      content: e.detail.value
+    })
+  },
+
+  formSubmit: function(e){
+    new currentPlay({
+      Title: this.data.title,
+      Content: this.data.content
+    }).save()
+      .then(console.log)
+      .catch(console.error);
+    },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-  },
-
-  editView: function () {
-    wx.navigateTo({
-      url: '../play/edit'
-    })
+  
   },
 
   /**

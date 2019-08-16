@@ -6,7 +6,8 @@
     "pages/resource/resource",
     "pages/setting/setting",
     "pages/trade/trade",
-    "pages/play/play"
+    "pages/play/play",
+    "pages/play/edit"
   ],
   "window":{
     "backgroundTextStyle": "dark",

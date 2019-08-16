@@ -1,2 +1,12 @@
 <!--pages/play/play.wxml-->
 约局页
+<button bindtap="editView">添加</button>
+<div class="grid-container">
+    <view wx:for="{{worklist}}">
+        <div class="block">
+            标题
+            内容
+            头像
+        </div>
+    </view>
+</div>
